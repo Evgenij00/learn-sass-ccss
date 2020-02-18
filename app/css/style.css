@@ -1,0 +1,15 @@
+body {
+  background-color: #ff4500;
+}
+
+.block {
+  background-color: #5b3a29;
+}
+
+.block h1 {
+  color: #ff4500;
+}
+
+.block a {
+  color: green;
+}
