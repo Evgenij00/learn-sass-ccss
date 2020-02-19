@@ -7,8 +7,9 @@
   background: #fafafa;
   height: 200px;
   width: 300px;
-  border: 2px solid silver;
+  border: 2px solid #8307a1;
   margin-bottom: 20px;
+  padding: 10px 10px 10px 100px;
 }
 
 #central_block {
@@ -26,17 +27,23 @@
 }
 
 #central_block li a {
-  color: #cccccc;
+  font-size: 1.1em;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  color: red;
 }
 
 #central_block a {
-  color: blue;
+  font-size: 1.1em;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  color: orange;
 }
 
 .first {
   background: #fafafa;
   height: 100px;
   width: 300px;
-  border: 2px solid silver;
+  border: 2px solid #8307a1;
   margin-bottom: 20px;
 }

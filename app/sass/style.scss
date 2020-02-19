@@ -1,7 +1,22 @@
 $bgColor: #fafafa;
-$color: #cccccc;
+$color: orange;
 $blockWidth: 300px;
-$border: 2px solid silver;
+$border: 2px solid rgb(131, 7, 161);
+$mainFontSize: 1.1em;
+
+
+//создание миксина, объявление параметров и пример объявления параметра по умолчанию
+@mixin font($fontW, $color: red) {
+    font-size: $mainFontSize;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    color: $color;
+}
+
+//передаем множество параметров
+@mixin padd($padd...) {
+    padding: $padd;
+}
 
 * {
     padding: 0;
@@ -14,6 +29,7 @@ $border: 2px solid silver;
     width: $blockWidth;
     border: $border;
     margin-bottom: 20px;
+    @include padd (10px 10px 10px 100px)
 }
 
 #central_block {
@@ -29,12 +45,13 @@ $border: 2px solid silver;
         margin-right: 10px;
 
         a {
-            color: $color;
+            @include font(bold);
         }
     }
 
     a {
-        color: blue;
+        //пример передачи параметров не по порядку
+        @include font($color: $color, $fontW: ligth,)
     }
 }
 
