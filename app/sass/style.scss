@@ -6,12 +6,32 @@
     margin: 0;
 }
 
+//взяли и вставили этот миксин, в котором шаблон с ссылкой
+@include link(black, red, blue, green);
+
+.header {
+    @include link(black, red, blue, green) {
+        background: #000;
+
+        &:visited {
+            color: red
+        }
+    } 
+}
+
 #grid {
     float: left;
     width: 100%;
 
     > div {
-        @include grid(7, 5%);
+        @include grid(4, 2%);
+    }
+}
+
+@for $i from 24 to 29 {
+    .#{$someVar}-#{$i} {
+        width: 50px + $i;
+        height: 50px + $i;
     }
 }
 

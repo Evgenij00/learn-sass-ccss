@@ -1,11 +1,17 @@
 @mixin grid($columns, $margin) {
     float: left;
     background: #ce3d3d;
-    margin-right: $margin;
     margin-bottom: $margin;
     height: 150px;
-    width: ((100% - (($columns - 1) * $margin)) / $columns);
 
+    @if ($columns >= 5) {
+        width: 100%;
+        margin-right: 0;
+    } 
+    @else {
+        width: ((100% - (($columns - 1) * $margin)) / $columns);
+        margin-right: $margin;
+    }
 
     &:nth-child(#{$columns}n) {
         margin-right: 0;
@@ -34,10 +40,6 @@
             color: $link;
         }
 
-        &:visited {
-            color: $visited;
-        }
-
         &:hover {
             color: lighten($color: $link, $amount: 50%);
         }
@@ -45,8 +47,7 @@
         &:active {
             color: $active;
         }
+
+        @content
     }
 }
-
-//взяли и вставили этот миксин, в котором шаблон с ссылкой
-@include link(black, red, blue, green);
