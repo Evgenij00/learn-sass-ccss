@@ -1,27 +1,13 @@
-$bgColor: #fafafa;
-$color: orange;
-$blockWidth: 300px;
-$border: 2px solid rgb(131, 7, 161);
-$mainFontSize: 1.1em;
-
-
-//создание миксина, объявление параметров и пример объявления параметра по умолчанию
-@mixin font($fontW, $color: red) {
-    font-size: $mainFontSize;
-    font-weight: bold;
-    font-family: Arial, Helvetica, sans-serif;
-    color: $color;
-}
-
-//передаем множество параметров
-@mixin padd($padd...) {
-    padding: $padd;
-}
+@import 'mixins';
+@import 'variables';
 
 * {
     padding: 0;
     margin: 0;
 }
+
+//взяли и вставили этот миксин, в котором шаблон с ссылкой
+@include link(black, red, blue, green);
 
 .block:not(.first) {
     background: $bgColor;
@@ -46,6 +32,10 @@ $mainFontSize: 1.1em;
 
         a {
             @include font(bold);
+
+            &:hover {
+                color: orange;
+            }
         }
     }
 

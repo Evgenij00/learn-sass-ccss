@@ -3,10 +3,26 @@
   margin: 0;
 }
 
+a:link {
+  color: black;
+}
+
+a:visited {
+  color: green;
+}
+
+a:hover {
+  color: red;
+}
+
+a:active {
+  color: blue;
+}
+
 .block:not(.first) {
   background: #fafafa;
   height: 200px;
-  width: 300px;
+  width: 500px;
   border: 2px solid #8307a1;
   margin-bottom: 20px;
   padding: 10px 10px 10px 100px;
@@ -33,6 +49,10 @@
   color: red;
 }
 
+#central_block li a:hover {
+  color: orange;
+}
+
 #central_block a {
   font-size: 1.1em;
   font-weight: bold;
@@ -43,7 +63,7 @@
 .first {
   background: #fafafa;
   height: 100px;
-  width: 300px;
+  width: 500px;
   border: 2px solid #8307a1;
   margin-bottom: 20px;
 }
