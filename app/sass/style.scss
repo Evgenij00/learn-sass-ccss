@@ -6,6 +6,15 @@
     margin: 0;
 }
 
+#grid {
+    float: left;
+    width: 100%;
+
+    > div {
+        @include grid(7, 5%);
+    }
+}
+
 .block:not(.first) {
     background: $bgColor;
     height: 200px;

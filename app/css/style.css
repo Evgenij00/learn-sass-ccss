@@ -7,7 +7,7 @@ a:visited {
 }
 
 a:hover {
-  color: red;
+  color: gray;
 }
 
 a:active {
@@ -17,6 +17,24 @@ a:active {
 * {
   padding: 0;
   margin: 0;
+}
+
+#grid {
+  float: left;
+  width: 100%;
+}
+
+#grid > div {
+  float: left;
+  background: #ce3d3d;
+  margin-right: 5%;
+  margin-bottom: 5%;
+  height: 150px;
+  width: 10%;
+}
+
+#grid > div:nth-child(7n) {
+  margin-right: 0;
 }
 
 .block:not(.first) {

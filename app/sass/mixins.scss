@@ -1,3 +1,18 @@
+@mixin grid($columns, $margin) {
+    float: left;
+    background: #ce3d3d;
+    margin-right: $margin;
+    margin-bottom: $margin;
+    height: 150px;
+    width: ((100% - (($columns - 1) * $margin)) / $columns);
+
+
+    &:nth-child(#{$columns}n) {
+        margin-right: 0;
+    }
+}
+
+
 //создание миксина, объявление параметров и пример объявления параметра по умолчанию
 @mixin font($fontW, $color: red) {
     font-size: $mainFontSize;
@@ -24,7 +39,7 @@
         }
 
         &:hover {
-            color: $hover;
+            color: lighten($color: $link, $amount: 50%);
         }
 
         &:active {
